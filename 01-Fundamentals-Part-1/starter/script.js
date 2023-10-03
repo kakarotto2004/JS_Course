@@ -22,10 +22,27 @@
 
 
 // CHALLENGE #1
-let massMark = 78, heightMark = 1.69, massJohn = 92, heightJohn = 1.95;
-let BMIMark = massMark / (heightMark * heightMark), BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
+// let massMark = 78, heightMark = 1.69, massJohn = 92, heightJohn = 1.95;
+// let BMIMark = massMark / (heightMark * heightMark), BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log(BMIMark, BMIJohn);
 
-let markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
+// let markHigherBMI = BMIMark > BMIJohn;
+// console.log(markHigherBMI);
+
+
+const firstName = "Jakub";
+const job = "IT technician";
+const birthYear = 2001;
+const currentYear = 2023;
+
+const aboutMe = "I'm " + firstName + ", a " + (currentYear - birthYear) + " year old " + job;
+console.log(aboutMe);
+
+const aboutMeNew = `I'm ${firstName}, a ${currentYear - birthYear} year old ${job}`;
+console.log(aboutMeNew);
+
+console.log('String with \n\
+multile lines\n\
+example');
+
 
