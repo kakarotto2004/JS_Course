@@ -132,6 +132,7 @@ if (shouldDrive && !isTired) {
 
 
 // CHALLENGE #3
+/*
 const scoreDolphins = (96 + 108 + 89) / 3;
 const scoreKoalas = (88 + 91 + 110) / 3;
 
@@ -142,3 +143,25 @@ if (scoreDolphins > scoreKoalas) {
 } else {
     console.log("Both win the trophy");
 }
+*/
+
+
+/*
+const age = 18;
+age >= 18 ? console.log("You can drink") : console.log("You can not drink");
+
+const drink = age >= 18 ? "can" : "can not";
+console.log(drink)
+
+console.log(`Can I drink? - ${age >= 18 ? "can" : "can not"}`);
+*/
+
+
+// CHALLENGE #4
+const bill = 275;
+
+let tip = 0;
+
+(bill >= 50 && bill <= 300) ? tip = bill * 0.15 : tip = bill * 0.2;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${tip + bill}`);
