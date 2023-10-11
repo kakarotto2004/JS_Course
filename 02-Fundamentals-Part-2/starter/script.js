@@ -107,8 +107,8 @@ console.log(yearsUntilRetirement(1970, 'Tom'));
 */
 
 
-
-// CHALLENGE #1 
+/*
+// CHALLENGE #1
 const calcAverage = (time1, time2, time3) => {
     return (time1 + time2 + time3) / 3;
 }
@@ -127,3 +127,87 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+
+
+////////////////////////////////////////////
+// ARRAYS
+
+/*
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const year = new Array(1991, 1984, 2000, 2012);
+console.log(year);
+
+console.log(friends[0], year[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay';
+console.log(friends);
+
+const jonas = ['Johnas', 'Surname', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+
+
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const years = [1990, 2000, 1997, 2002, 2017];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[2]);
+const age4 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3, age4);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[years.length - 1])];
+console.log(ages);
+*/
+
+/*
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// add
+friends.push('Tom'); // last
+friends.unshift('Jacob'); // first
+
+// remove
+const popped = friends.pop(); // last
+console.log(popped);
+friends.shift(); // first
+
+console.log(friends.indexOf('Steven'));
+
+friends.push(23);
+console.log(friends.includes('Tom'));
+console.log(friends.includes('Peter'));
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('Peter')) {
+    console.log('You have a friend Peter');
+}
+*/
+
+
+// CHALLENGE #2
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * 0.15;
+    } else {
+        return bill * 0.2;
+    }
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
