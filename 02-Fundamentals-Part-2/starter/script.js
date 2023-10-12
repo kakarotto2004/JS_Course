@@ -197,6 +197,7 @@ if (friends.includes('Peter')) {
 
 
 // CHALLENGE #2
+/*
 function calcTip(bill) {
     if (bill >= 50 && bill <= 300) {
         return bill * 0.15;
@@ -211,3 +212,44 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
+*/
+
+
+
+//////////////////////////////////
+// OBJECTS
+const jonasArray = [
+    'Jonas',
+    'Blink',
+    2023 - 1990,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Blink',
+    age: 2023 - 1990,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey])
+
+// const interestedIn = prompt('What do you want to know about Jonas?');
+
+// if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// }
+
+
+jonas.location = "Poland";
+jonas['twitter'] = "@jonasPL";
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`);
