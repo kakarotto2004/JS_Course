@@ -10,6 +10,7 @@
 // PROBLEM 1:
 // We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 
+/*
 const temperatures = [3, -2, -6, -1, "error", 9, 23, 17, 15, 14, 9, 5];
 
 // 1) Understanding the problem
@@ -74,3 +75,48 @@ const calcTempAmplitudeNew = function (temps1, temps2) {
 
 const amplitudeNew = calcTempAmplitudeNew(temperatures, temperatures2);
 console.log(amplitudeNew);
+*/
+
+const measureKelvin = function () {
+    const measurement = {
+        type: "temp",
+        unit: "celsius",
+
+        // change to number
+        // value: Number(prompt("Degrees celsius:")),
+        value: 10,
+    };
+
+    console.log(measurement.value);
+    console.table(measurement);
+    // console.warn(measurement.value);
+    // console.error(measurement.value);
+
+    const kelvin = measurement.value + 273;
+    return kelvin;
+};
+
+console.log(measureKelvin());
+
+const calcTempAmplitudeBug = function (temps1, temps2) {
+    const tempsConcat = temps1.concat(temps2);
+    let max = tempsConcat[0];
+    // let min = tempsConcat[0];
+    let min = 0; // bug
+    // console.log(tempsConcat);
+
+    for (let i = 0; i < tempsConcat.length; i++) {
+        const curTemp = tempsConcat[i];
+
+        if (typeof curTemp !== "number") continue;
+
+        // debugger;    // opens debugger in browser
+        if (curTemp > max) max = curTemp;
+        if (curTemp < min) min = curTemp;
+    }
+
+    console.log(max, min);
+    return max - min;
+};
+
+console.log(calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]));
