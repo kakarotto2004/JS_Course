@@ -77,6 +77,7 @@ const amplitudeNew = calcTempAmplitudeNew(temperatures, temperatures2);
 console.log(amplitudeNew);
 */
 
+/*
 const measureKelvin = function () {
     const measurement = {
         type: "temp",
@@ -120,3 +121,19 @@ const calcTempAmplitudeBug = function (temps1, temps2) {
 };
 
 console.log(calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]));
+*/
+
+/////////////////////////////////////////////////
+// CHALLENGE #1
+const temps = [17, 21, 23];
+
+const printForecast = function (arr) {
+    let outputString = "";
+    for (let i = 0; i < arr.length; i++) {
+        outputString += "... " + arr[i] + "^C in " + (i + 1) + " days ...";
+    }
+
+    return outputString;
+};
+
+console.log(printForecast(temps));
