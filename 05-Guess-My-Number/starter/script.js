@@ -15,7 +15,7 @@ console.log(document.querySelector('.guess').value);*/
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-let highestScore = 0;
+let highscore = 0;
 // document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -30,6 +30,11 @@ document.querySelector('.check').addEventListener('click', function () {
 
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('.message').textContent = 'Correct Number!';
+
+        if (score > highscore) {
+            highscore = score;
+            document.querySelector('.highscore').textContent = highscore;
+        }
     } else if (guess > secretNumber) {
         if (score > 1) {
             document.querySelector('.message').textContent = 'Too hight!';
