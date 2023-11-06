@@ -56,7 +56,37 @@ const restaurant = {
 
 // =================================================================
 
+console.log(3 || 'Jakub');
+console.log('' || 'Jakub');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(null || undefined);
+
+console.log(undefined || 0 || '' || 'Hello' || 23);
+
+// restaurant.numGeusts = 23;
+const guests1 = restaurant.numGeusts ? restaurant.numGeusts : 15;
+console.log(guests1);
+
+const guests2 = restaurant.numGeusts || 10;
+console.log(guests2);
+
+console.log('-------------------');
+
+console.log(0 && 'Jakub');
+console.log(7 && 'Jakub');
+
+console.log('Hello' && 23 && null && 'Jakub');
+
+if (restaurant.orderPizza) {
+    restaurant.orderPizza('mushrooms', 'qq');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'onions');
+
+// =================================================================
+
 // Rest Pattern
+/*
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -89,6 +119,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'paprica', 'qq');
 restaurant.orderPizza('mushrooms');
+*/
 
 // =================================================================
 
