@@ -41,10 +41,61 @@ const restaurant = {
             `Order received! ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered to ${address} at ${time}`
         );
     },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(
+            `Here is your delecious pasta with ${ing1}, ${ing2}, ${ing3}`
+        );
+    },
 };
 
-// Destructuring objects
+// Spread operator
 
+const arr = [7, 8, 9];
+const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArray);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+const str = 'Jakub';
+const letters = [...str];
+console.log(letters);
+
+//
+
+// const ingredients = [
+//     prompt('Ingredient 1?'),
+//     prompt('Ingredient 2?'),
+//     prompt('Ingredient 3?'),
+// ];
+// restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { ...restaurant, funder: 'Guiseppe', foundedIn: 1998 };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
+// =================================================================
+
+// Destructuring objects
+/*
 restaurant.orderDelivery({
     time: '22:30',
     address: 'Piotrkowska 12',
@@ -83,6 +134,7 @@ const {
     fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+*/
 
 // =================================================================
 
