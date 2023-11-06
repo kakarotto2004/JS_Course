@@ -47,10 +47,52 @@ const restaurant = {
             `Here is your delecious pasta with ${ing1}, ${ing2}, ${ing3}`
         );
     },
+
+    orderPizza: function (mainIngredient, ...otherIngredients) {
+        console.log(mainIngredient);
+        console.log(otherIngredients);
+    },
 };
 
-// Spread operator
+// Rest Pattern
 
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+    ...restaurant.mainMenu,
+    ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// Functions
+const add = function (...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    console.log(sum);
+};
+
+add(2, 3);
+add(2, 5, 7, 2);
+add(2, 5, 2, 5, 9, 4, 9);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'paprica', 'qq');
+restaurant.orderPizza('mushrooms');
+
+// =================================================================
+
+// Spread operator
+/*
 const arr = [7, 8, 9];
 const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArray);
@@ -91,6 +133,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+*/
 
 // =================================================================
 
