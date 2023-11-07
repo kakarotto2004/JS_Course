@@ -54,6 +54,7 @@ const restaurant = {
     },
 };
 
+/*
 const rest1 = {
     name: 'Carpi',
     numGuests: 0,
@@ -80,6 +81,7 @@ rest2.owner &&= '<ANONYUMOUS>';
 
 console.log(rest1);
 console.log(rest2);
+*/
 
 // =================================================================
 
